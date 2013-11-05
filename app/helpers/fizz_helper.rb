@@ -2,11 +2,11 @@ module FizzHelper
   
     def fizzy(num)
     
-     if num%3 == 0 && num%5==0
+     if num%@fizz_number == 0 && num%@buzz_number == 0
         return @fizz_name + @buzz_name
-      elsif num%3 == 0
+      elsif num%@fizz_number == 0
        return @fizz_name
-      elsif num%5 == 0
+      elsif num%@buzz_number == 0
         return @buzz_name
       else
        return num
@@ -16,7 +16,7 @@ module FizzHelper
   
     def color_chooser(num)
     
-      (num%3 == 0 && num%5==0) ? "bgcolor=#fee000" : ""
+      (num%@fizz_number == 0 && num%@buzz_number==0) ? "bgcolor=#fee000" : ""
     end
   
 end

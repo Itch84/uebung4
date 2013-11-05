@@ -20,14 +20,13 @@ Max Nummer: <%= @max_number%></p>
 <tr <%= color_chooser(x) %>>
   <td> <%= x %></td>
  
-  <td> <%= x%3 == 0 ? "x" : "" %> </td>
+  <td> <%= x%@fizz_number == 0 ? "x" : "" %> </td>
   
-  <td> <%= x%5 == 0 ? "x" : "" %> </td>
+  <td> <%= x%@buzz_number == 0 ? "x" : "" %> </td>
   
   <td> <%= fizzy(x) %> </td>
-  
-  
 
 </tr>
 <% end %>
+
 </table>
