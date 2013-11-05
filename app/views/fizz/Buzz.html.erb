@@ -1,2 +1,33 @@
-<h1>Fizz#Buzz</h1>
-<p>Find me in app/views/fizz/Buzz.html.erb</p>
+<h1>Fizz # Buzz</h1>
+<p>Ausgabe der Variablen: </p>
+<p> Fizz-Name: <%= @fizz_name %><br>
+Buzz-Name: <%= @buzz_name%><br>
+Fizz Nummer: <%= @fizz_number%><br>
+Buzz Nummer: <%= @buzz_number %><br>
+Max Nummer: <%= @max_number%></p>
+
+
+<table border="1">
+	
+<tr align="center">
+  	<td>Zahl: <%= @max_number %></td>
+	<td>Teilbar durch <%= @fizz_number%></td>
+	<td>Teilbar durch <%= @buzz_number%></td>
+	<td>Fizzbuzz</td>
+</tr>
+
+<% 1.upto(@max_number) do |x| %>
+<tr <%= color_chooser(x) %>>
+  <td> <%= x %></td>
+ 
+  <td> <%= x%3 == 0 ? "x" : "" %> </td>
+  
+  <td> <%= x%5 == 0 ? "x" : "" %> </td>
+  
+  <td> <%= fizzy(x) %> </td>
+  
+  
+
+</tr>
+<% end %>
+</table>
